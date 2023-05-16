@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorAppAccent">#FF00ccee</color>
+    <color name="registerbuttoncoler">#ff8f8f8f</color>
 </resources>

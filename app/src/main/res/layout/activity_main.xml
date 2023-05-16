@@ -1,18 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:float="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="230dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/title"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/username_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/users"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"/>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:id="@+id/edit_text_username"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username" />
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username_layout">
+
+            <ImageView
+                android:id="@+id/password_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pw"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"/>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                float:fletPaddingBottom="10dp"
+               >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <com.royrodriguez.transitionbutton.TransitionButton
+            android:id="@+id/transition_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
+            app:defaultColor="@color/colorAppAccent"
+            app:loaderColor="@android:color/white"
+            android:textColor="@android:color/white" />
+
+        <com.royrodriguez.transitionbutton.TransitionButton
+            android:id="@+id/transition_button1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transition_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Register"
+            app:defaultColor="@color/registerbuttoncoler"
+            app:loaderColor="@android:color/white"
+            android:textColor="@android:color/white"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
